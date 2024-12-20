@@ -111,6 +111,31 @@ public:
             std::cout << "\n";
         }
     }
+// Funzione per trovare il nodo con il peso minimo da un nodo specifico
+    void arcoMinimo(const T& nodo) const {
+        int indice = trovaIndice(nodo); // Trova l'indice del nodo
+        if (indice == -1) {
+            std::cout << "Errore: il nodo non esiste.\n";
+            return;
+        }
+
+        int minPeso = INF; // Inizializza il peso minimo
+        T nodoDestinazioneMinima;
+
+        // Cerca l'arco con il peso minimo
+        for (int i = 0; i < numeroNodi; ++i) {
+            if (esisteNodo[i] && matriceAdiacenza[indice][i] != INF && matriceAdiacenza[indice][i] < minPeso) {
+                minPeso = matriceAdiacenza[indice][i];
+                nodoDestinazioneMinima = nodi[i];
+            }
+        }
+
+        if (minPeso != INF) {
+            std::cout << "L'arco minimo da " << nodo << " è verso " << nodoDestinazioneMinima << " con peso " << minPeso << ".\n";
+        } else {
+            std::cout << "Non ci sono archi uscenti da " << nodo << ".\n";
+        }
+    }
 
     // Verifica se un nodo esiste
     bool verificaNodo(const T& nodo) const {
