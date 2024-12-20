@@ -57,14 +57,15 @@ int main() {
 }
 
 
-/*
+/* GRAFO IDEALE
+NODI:
 	•	Trieste
 	•	Taranto
 	•	Bolzano
 	•	Augusta
 	•	Frosinone
 
-Archi (con distanze):
+ARCHI (con distanze):
 	•	Trieste → Taranto: 1049 km
 	•	Taranto → Bolzano: 1035 km
 	•	Bolzano → Augusta: 1458 km
