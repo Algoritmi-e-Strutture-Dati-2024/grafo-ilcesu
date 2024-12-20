@@ -131,7 +131,7 @@ public:
         }
 
         if (minPeso != INF) {
-            std::cout << "L'arco minimo da " << nodo << " è verso " << nodoDestinazioneMinima << " con peso " << minPeso << ".\n";
+            std::cout << "L'arco minimo da " << nodo << " è verso " << nodoDestinazioneMinima << " con distanza(peso) " << minPeso << ".\n";
         } else {
             std::cout << "Non ci sono archi uscenti da " << nodo << ".\n";
         }
